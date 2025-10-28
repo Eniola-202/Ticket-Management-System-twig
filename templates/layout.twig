@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}TicketFlow{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body class="bg-gray-50">
+    {% block content %}{% endblock %}
+    
+    <!-- Flash Messages -->
+    {% if flash %}
+    <div class="fixed top-6 right-6 z-50 max-w-md animate-slide-in 
+                {% if flash.type == 'error' %}bg-red-500{% else %}bg-green-500{% endif %} 
+                text-white px-6 py-4 rounded-lg shadow-2xl flex items-center gap-3">
+        {% if flash.type == 'error' %}
+        <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        {% else %}
+        <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        {% endif %}
+        <p class="flex-1 font-medium">{{ flash.message }}</p>
+        <button onclick="this.parentElement.remove()" class="hover:bg-white/20 rounded p-1 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+        </button>
+    </div>
+    {% endif %}
+    
+    <script>
+        // Auto-hide flash messages after 5 seconds
+        setTimeout(() => {
+            const flash = document.querySelector('.fixed.top-6');
+            if (flash) flash.remove();
+        }, 5000);
+    </script>
+</body>
+</html>
