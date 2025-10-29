@@ -13,7 +13,7 @@
                 </svg>
                 <span class="text-2xl font-bold text-gray-800">TicketFlow</span>
             </div>
-            <a href="/index.php?page=dashboard" class="flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-all font-medium">
+            <a href="?page=dashboard" class="flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-all font-medium">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
                 </svg>
@@ -83,7 +83,7 @@
                                 </svg>
                                 Edit
                             </button>
-                            <form action="/index.php?page=tickets" method="POST" class="inline">
+                            <form action="?page=tickets" method="POST" class="inline">
                                 <input type="hidden" name="action" value="delete">
                                 <input type="hidden" name="ticket_id" value="{{ ticket.id }}">
                                 <button type="submit" onclick="return confirm('Are you sure you want to delete this ticket?')" class="flex items-center gap-2 px-4 py-2 bg-white text-red-600 border border-red-200 rounded-lg hover:bg-red-50 transition-all font-medium">
@@ -115,7 +115,7 @@
             </button>
         </div>
 
-        <form id="ticketForm" action="/index.php?page=tickets" method="POST" class="p-6 space-y-6">
+        <form id="ticketForm" action="?page=tickets" method="POST" class="p-6 space-y-6">
             <input type="hidden" name="action" value="create">
             <input type="hidden" id="ticketId" name="ticket_id" value="">
 

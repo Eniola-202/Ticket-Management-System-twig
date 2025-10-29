@@ -1,0 +1,4 @@
+vendor/
+data/
+*.log
+.DS_Store

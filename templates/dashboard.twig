@@ -23,7 +23,7 @@
                 </div>
                 
                 <!-- Logout Button -->
-                <a href="/index.php?page=logout" class="flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-red-600 hover:bg-red-50 rounded-lg transition-all font-medium">
+                <a href="?page=logout" class="flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-red-600 hover:bg-red-50 rounded-lg transition-all font-medium">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/>
                     </svg>
@@ -44,7 +44,7 @@
             </div>
             
             <!-- Quick Action Button -->
-            <a href="/index.php?page=tickets" class="flex items-center justify-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition-all shadow-lg hover:shadow-xl hover:scale-105 font-semibold">
+            <a href="?page=tickets" class="flex items-center justify-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition-all shadow-lg hover:shadow-xl hover:scale-105 font-semibold">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
                 </svg>
@@ -116,7 +116,7 @@
         <div class="grid md:grid-cols-2 gap-6 mb-8">
             
             <!-- Ticket Management Link -->
-            <a href="/index.php?page=tickets" class="bg-gradient-to-br from-indigo-500 to-purple-600 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all cursor-pointer group">
+            <a href="?page=tickets" class="bg-gradient-to-br from-indigo-500 to-purple-600 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all cursor-pointer group">
                 <div class="flex items-start justify-between mb-4">
                     <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                         <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -188,7 +188,7 @@
                     <h2 class="text-2xl font-bold text-gray-900 mb-1">Recent Tickets</h2>
                     <p class="text-sm text-gray-600">Your latest support requests</p>
                 </div>
-                <a href="/index.php?page=tickets" class="text-indigo-600 hover:text-indigo-700 font-semibold text-sm flex items-center gap-1 hover:gap-2 transition-all">
+                <a href="?page=tickets" class="text-indigo-600 hover:text-indigo-700 font-semibold text-sm flex items-center gap-1 hover:gap-2 transition-all">
                     View All
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
@@ -203,7 +203,7 @@
                 </svg>
                 <h3 class="text-lg font-semibold text-gray-900 mb-2">No tickets yet</h3>
                 <p class="text-gray-600 mb-6">Create your first ticket to get started</p>
-                <a href="/index.php?page=tickets" class="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition-all font-semibold">
+                <a href="?page=tickets" class="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition-all font-semibold">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
                     </svg>
@@ -213,7 +213,7 @@
             {% else %}
             <div class="space-y-3">
                 {% for ticket in tickets|slice(0, 5) %}
-                <a href="/index.php?page=tickets" class="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 rounded-xl transition-all cursor-pointer border border-gray-200">
+                <a href="?page=tickets" class="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 rounded-xl transition-all cursor-pointer border border-gray-200">
                     <div class="flex-1">
                         <h3 class="font-semibold text-gray-900 mb-1">{{ ticket.title }}</h3>
                         <div class="flex items-center gap-3 text-sm">
@@ -242,13 +242,13 @@
                     <p class="text-sm text-gray-600">Check out our guide or create your first ticket</p>
                 </div>
                 <div class="flex gap-3">
-                    <a href="/index.php?page=landing" class="flex items-center gap-2 px-5 py-2.5 bg-white text-gray-700 rounded-lg hover:bg-gray-50 transition-all font-medium shadow-sm">
+                    <a href="?page=landing" class="flex items-center gap-2 px-5 py-2.5 bg-white text-gray-700 rounded-lg hover:bg-gray-50 transition-all font-medium shadow-sm">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
                         </svg>
                         Home
                     </a>
-                    <a href="/index.php?page=tickets" class="flex items-center gap-2 px-5 py-2.5 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all font-medium shadow-md">
+                    <a href="?page=tickets" class="flex items-center gap-2 px-5 py-2.5 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all font-medium shadow-md">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
                         </svg>
