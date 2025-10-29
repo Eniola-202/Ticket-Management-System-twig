@@ -1,0 +1,8 @@
+{
+  "name": "ticketflow-twig",
+  "version": "1.0.0",
+  "dependencies": {},
+  "engines": {
+    "node": ">=18.x"
+  }
+}

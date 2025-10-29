@@ -1,0 +1,4 @@
+{
+  "runtime": "provided",
+  "handler": "index.php"
+}
