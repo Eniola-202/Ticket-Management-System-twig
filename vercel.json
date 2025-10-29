@@ -3,7 +3,7 @@
   "builds": [
     {
       "src": "api/**/*.php",
-      "use": "@vercel/php"
+      "use": "vercel-php@latest"
     }
   ],
   "routes": [
@@ -12,7 +12,7 @@
       "dest": "/assets/$1"
     },
     {
-      "src": "/vendor/(.*)", 
+      "src": "/vendor/(.*)",
       "dest": "/vendor/$1"
     },
     {
